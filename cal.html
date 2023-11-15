@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+    $("#div4").fadeIn(5000);
+    $("#div5").fadeIn(8000);
+  });
+});
+</script>
+    <title>Dynamic calculator Example</title>
+</head>
+<div class="header">
+    <center><h1>JQuery Excercises</h1>
+    <h3>Emanuella Ivana Karunia - L1AC - 2702323585</h3></center>
+    </div>
+<body>
+<center>
+    <h2>--- WELCOME TO MY WEBSITE ---</h2>
+    <br>
+    <div id="button1"><button>Menu</button></div><br><br>
+
+    <div id="div1" style="width:80px;height:80px;display:none;background-color: brown;"><a href="index.html">main menu</a></div><br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:orangered;"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">orangered</a></div><br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:orange;"><a href="cal.html">calculator</a></div><br>
+    <div id="div4" style="width:80px;height:80px;display:none;background-color:yellow;"><a href="faq.html">faq</a></div><br>
+    <div id="div5" style="width:80px;height:80px;display:none;background-color:white;"><a href="blank.html">white</a></div>
+    <h2>Dynamic Calculator!</h2>
+    <form id="multiplicationForm">
+        <label for="floatInput">Please enter the item price:</label>
+        <input type="number" step="0.01" id="floatInput" name="floatInput" required>
+
+        <label for="intInput">Please enter the item quantity:</label>
+        <input type="number" step="1" id="intInput" name="intInput" required>
+
+        <button type="button" onclick="multiplyInputs()">total</button>
+    </form>
+
+    <h2 id="result">Your total for today's purchase is $</h2>
+
+    <script>
+        function multiplyInputs() {
+            var floatInputValue = parseFloat(document.getElementById("floatInput").value);
+            var intInputValue = parseInt(document.getElementById("intInput").value);
+
+
+            if (isNaN(floatInputValue) || isNaN(intInputValue)) {
+                alert("Please enter valid numbers");
+                return;
+            }
+
+
+            var result = floatInputValue * intInputValue;
+
+
+            document.getElementById("result").textContent = "Your total for today's purchase is $ " + result;
+        }
+    </script>
+    
+<br>
+<br>
+</body>
+<br>
+<br>
+<div class="footer"><h3>okay that's all byeee~~~</h3></div>
+</html>
